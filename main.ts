@@ -1,7 +1,7 @@
-import fs from 'node:fs';
-import path from 'node:path';
+// One-Star Review of Something Essential: a deadpan complaint against gravity, written to /output/entry.txt.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = `Sleep. Promised eight hours of rest, delivered three and a 4 a.m. staring contest with the ceiling. No refund. One star.`;
-const outDir = '/output';
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'entry.txt'), entry);
+// The review line, composed fresh for this bounty.
+const entry = "One star for gravity. Works fine until you drop your phone, then suddenly it is the fastest thing in the house.";
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", entry);
